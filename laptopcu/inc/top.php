@@ -44,12 +44,12 @@ if (isset($_GET['add-to-cart'])) {
     }
     //  var_dump($_SESSION['cart']);
 }
-// $cart = $_SESSION['cart'];
+$cart = $_SESSION['cart'];
 
-// $total = 0;
-// foreach ($cart as $item) {
-//     $total += $item['price'] * $item['quantity'];
-// }
+$total = 0;
+foreach ($cart as $item) {
+    $total += $item['price'] * $item['quantity'];
+}
 ?>
 
 <body>
@@ -58,16 +58,16 @@ if (isset($_GET['add-to-cart'])) {
             <div class="row">
                 <div class="col-md-8">
                     <div class="user-menu">
-                        <!-- <ul>
+                        <ul>
                             <li><img height="20px" width="20px" src="" alt=""><?php echo 'Xin Chào!  ' . $_SESSION['user_login'] ?></li>
                             <li><a href="profileuser.php"><i class="fa fa-user"></i>Tài khoản của tôi </a></li>
 
                             <li><a href="orders.php"><i class="fa fa-shopping-cart"></i>Đơn Hàng</a></li>
                             <li><a href="cart.php"><i class="fa fa-shopping-cart"></i>Giỏ Hàng</a></li>
                             <li><a href="checkout.php"><i class="fa fa-check"></i> Checkout</a></li>
-                            <!-- <li><a href="login.php"><i class="fa fa-user"></i> Đăng Nhập</a></li> -->
+                            <li><a href="login.php"><i class="fa fa-user"></i> Đăng Nhập</a></li>
                             <li><a href="?logout=true"><i class=""></i> Đăng xuất</a></li>
-                        </ul> -->
+                        </ul> 
                     </div>
                 </div>
 
@@ -98,7 +98,7 @@ if (isset($_GET['add-to-cart'])) {
     <div class="mainmenu-area">
         <div class="container">
             <div class="row">
-                <!-- <div class="navbar-header">
+                <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -107,7 +107,7 @@ if (isset($_GET['add-to-cart'])) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                </div> -->
+                </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.php">Home</a></li>
