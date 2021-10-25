@@ -15,7 +15,6 @@ $list = $product->getAll(0, 10);
                         <?php
                         foreach ($list as $r) {
                             $listImg = $product->getImg($r['id']);
-
                         ?>
                             <div class="single-product">
                                 <div class="product-f-image">

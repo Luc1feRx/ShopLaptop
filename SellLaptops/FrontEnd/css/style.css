@@ -673,10 +673,10 @@ body { font-family:Arial, Helvetica, sans-serif; }
 }
 .latest-product .owl-nav {
     position: absolute;
-    transform: translateX(-50px) translateY(-201px);
+    transform: translateX(-77px) translateY(-222px);
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    width: 1253px;
 }
 
 .latest-product .owl-nav div, .related-products-wrapper .owl-nav div {
@@ -701,10 +701,10 @@ body { font-family:Arial, Helvetica, sans-serif; }
 }
 .brand-list .owl-nav {
     position: absolute;
-    transform: translateX(-27px) translateY(-86px);
+    transform: translateX(-55px) translateY(-125px);
     display: flex;
     justify-content: space-between;
-    width: 1176px;
+    width: 1235px;
 }
 
 .brand-wrapper .owl-nav div {
