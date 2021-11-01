@@ -56,7 +56,7 @@ if (isset($_POST["submit"])) {
                 <div class="form-group row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Phone</label>
                     <div class="col-sm-10">
-                        <input type="number" name="phone" required>
+                        <input type="number" name="phone">
                     </div>
                 </div>
                 <input type="submit" class="btn btn-primary" name="submit" value="Đăng ký"></input>
