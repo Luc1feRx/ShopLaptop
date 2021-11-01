@@ -23,9 +23,9 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    /* background-position: center;
+    background-position: center;
     background-size: cover;
-    background-image: url("../img/44038_comics_batman_batman_silhouette.jpg"); */
+    background-image: url("../img/44038_comics_batman_batman_silhouette.jpg");
 }
 
 .card{
@@ -45,9 +45,9 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 14, 0.8), rgba(0, 0, 27, 0.8)), url("../img/batman-3-scaled-e1603922387432.jpg");
+    /* background-position: center;
+    background-size: cover; */
+    /* background-image: linear-gradient(rgba(0, 0, 14, 0.8), rgba(0, 0, 27, 0.8)), url("../img/batman-3-scaled-e1603922387432.jpg"); */
     padding: 55px;
     box-sizing: border-box;
     backface-visibility: hidden;

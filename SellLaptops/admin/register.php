@@ -7,8 +7,10 @@
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $username = $_POST['username'];
         $password = md5($_POST['password']);
+		$passwordR = md5($_POST['passwordR']);
+        $email = $_POST['email'];
 
-        $login_check = $adminlogin->login_admin($username, $password);
+        $register = $adminlogin->insert_admin($username, $password, $email, $passwordR);
     }
 ?>
 
@@ -17,7 +19,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login</title>
+	<title>Register</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -48,21 +50,29 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form method="post" action="login.php" class="login100-form validate-form">
-                    <span class="login100-form-title p-b-34">
-						Account Login
-					</span>
-                    <?php
-                        if(isset($login_check)){
-                            echo $login_check;
+				<form id="signup-form" method="post" action="" onsubmit="return validateForm()" class="login100-form validate-form">
+					<?php
+                        if(isset($register)){
+                            echo $register;
                         }
 			        ?>
-					<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
-						<input id="first-name" class="input100" type="text" name="username" placeholder="User name">
+                    <span class="login100-form-title p-b-34">
+						Account REGISTER
+					</span>
+					<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20">
+						<input class="input100" type="text" name="username" placeholder="User name">
 						<span class="focus-input100"></span>
 					</div>
-					<div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
-						<input class="input100" type="password" name="password" placeholder="Password">
+					<div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20">
+						<input class="input100" type="password" name="password" id="password" placeholder="Password">
+						<span class="focus-input100"></span>
+					</div>
+                    <div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20">
+						<input class="input100" type="password" name="passwordR" id="confirm_password" placeholder="Repeat Password">
+						<span class="focus-input100"></span>
+					</div>
+                    <div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20">
+						<input class="input100" type="email" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
 					</div>
 					
@@ -83,13 +93,13 @@
 					</div>
 
 					<div class="w-full text-center">
-						<a href="register.php" class="txt3">
-							Sign Up
+						<a href="login.php" class="txt3">
+							Sign In
 						</a>
 					</div>
 				</form>
 
-				<div class="login100-more" style="background-image: url('lo/images/bg4.png');"></div>
+				<div class="login100-more" style="background-image: url('lo/images/bg3.png');"></div>
 			</div>
 		</div>
 	</div>
@@ -120,6 +130,16 @@
 	<script src="lo/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="lo/js/main.js"></script>
-
+	<script>
+        function validateForm() {
+            $password = $('#password').val();
+            $confirm_password = $('#confirm_password').val();
+            if ($password != $confirm_password) {
+                alert("Mật khẩu không khớp, vui lòng kiểm tra lại");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
